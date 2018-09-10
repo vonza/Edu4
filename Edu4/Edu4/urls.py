@@ -3,19 +3,10 @@ Definition of urls for Edu4.
 """
 
 from django.conf.urls import include, url
+import Edu4Test.views
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
-
+# Django processes URL patterns in the order they appear in the array
 urlpatterns = [
-    # Examples:
-    # url(r'^$', Edu4.views.home, name='home'),
-    # url(r'^Edu4/', include('Edu4.Edu4.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', Edu4Test.views.index, name='index'),
+    url(r'^home$', Edu4Test.views.index, name='home'),
 ]
